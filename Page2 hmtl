@@ -71,8 +71,5 @@
         //     .bindPopup('Borne de recyclage de vêtements')
         //     .openPopup();
     </script>
-
-    <!-- Lien vers la troisième page -->
-    <a href="PPP3.html">Voir les informations détaillées sur les bornes de recyclage</a>
 </body>
 </html>
