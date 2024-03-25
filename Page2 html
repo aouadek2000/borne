@@ -31,6 +31,41 @@
             text-decoration: none;
             color: white;
         }
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte des bornes de recyclage</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            background-color: purple;
+            padding: 10px;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .menu ul li {
+            margin-right: 20px;
+        }
+        .menu ul li:first-child {
+            margin-right: auto; /* Coller au bord gauche */
+            margin-left: 0; /* Annuler toute marge à gauche */
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        #searchContainer {
+            text-align: center;
+            margin-top: 50px;
+        }
 </style>
 </head>
 <body>
@@ -38,9 +73,10 @@
         <div class="col-2 menu">
             <nav>
                 <ul>
-                    <li><a href="PPP1.html" style="color: #F5F5DC";>Recherche d'adresses</a></li>
-                    <li><a href="PPP2.html" style="color: #FFC300";>Carte des bornes de recyclage</a></li>
-                    <li><a href="PPP3.html" style="color: #F5F5DC";>Informations sur les bornes de recyclage</a></li>
+                    <li><a style="color: #F5F5DC";>RecycleMe</a></li>
+                    <li><a href="PPP1.html" style="color: #F5F5DC";>Position</a></li>
+                    <li><a href="PPP2.html" style="color: #FFC300";>Carte</a></li>
+                    <li><a href="PPP3.html" style="color: #F5F5DC";>Informations</a></li>
                 </ul>
             </nav>
         </div>
