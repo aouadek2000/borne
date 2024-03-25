@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte des bornes de recyclage</title>
+    <!-- Inclure les liens vers Leaflet.js et le script JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            background-color: purple;
+            padding: 10px;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center; /* Centrer les éléments du menu */
+        }
+        .menu ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+        }
+</style>
+</head>
+<body>
+    <div class="mf2col">
+        <div class="col-2 menu">
+            <nav>
+                <ul>
+                    <li><a href="PPP1.html" style="color: #F5F5DC";>Recherche d'adresses</a></li>
+                    <li><a href="PPP2.html" style="color: #FFC300";>Carte des bornes de recyclage</a></li>
+                    <li><a href="PPP3.html" style="color: #F5F5DC";>Informations sur les bornes de recyclage</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Div pour afficher la carte -->
+    <div id="map" style="height: 500px;"></div>
+
+    <script>
+        // Récupérer l'adresse depuis l'URL
+        var params = new URLSearchParams(window.location.search);
+        var address = params.get('address');
+
+        // Ici, vous pouvez utiliser l'adresse pour rechercher les bornes de recyclage dans un rayon de 1 km à Lyon
+        // et afficher les bornes sur la carte à l'aide de Leaflet.js
+        // Pour des raisons de simplicité, voici un exemple de carte Leaflet centrée sur Lyon
+
+        // Créer la carte
+        var map = L.map('map').setView([45.75, 4.85], 13); // Coordonnées de Lyon et zoom
+
+        // Ajouter une couche de tuiles OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Vous pouvez ajouter des marqueurs pour représenter les bornes de recyclage ici
+        // Par exemple :
+        // L.marker([45.75, 4.85]).addTo(map)
+        //     .bindPopup('Borne de recyclage de vêtements')
+        //     .openPopup();
+    </script>
+
+    <!-- Lien vers la troisième page -->
+    <a href="PPP3.html">Voir les informations détaillées sur les bornes de recyclage</a>
+</body>
+</html>
