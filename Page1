@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche d'adresses</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            background-color: purple;
+            padding: 10px;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center; /* Centrer les éléments du menu */
+        }
+        .menu ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        #searchContainer {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mf2col">
+        <div class="col-2 menu">
+            <nav>
+                <ul>
+                    <li><a href="PPP1.html" style="color: #FFC300";>Recherche d'adresses</a></li>
+                    <li><a href="PPP2.html" style="color: #F5F5DC";>Carte des bornes de recyclage</a></li>
+                    <li><a href="PPP3.html" style="color: #F5F5DC";>Informations sur les bornes de recyclage</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="searchContainer">
+        <h1>Recherche d'adresses</h1>
+        <input type="text" id="addressInput" placeholder="Entrez une adresse à Lyon...">
+        <button onclick="searchAddresses()">Rechercher</button>
+    </div>
+
+    <script>
+        function searchAddresses() {
+            var address = document.getElementById('addressInput').value;
+            // Redirection vers la deuxième page avec l'adresse en tant que paramètre de requête
+            window.location.href = 'PPP2.html?address=' + encodeURIComponent(address);
+        }
+    </script>
+</body>
+</html>
