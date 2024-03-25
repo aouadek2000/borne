@@ -18,11 +18,15 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            text-align: center; /* Centrer les éléments du menu */
+            display: flex;
+            align-items: center;
         }
         .menu ul li {
-            display: inline;
             margin-right: 20px;
+        }
+        .menu ul li:first-child {
+            margin-right: auto; /* Coller au bord gauche */
+            margin-left: 0; /* Annuler toute marge à gauche */
         }
         .menu ul li a {
             text-decoration: none;
