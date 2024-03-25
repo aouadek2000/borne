@@ -9,6 +9,18 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-image: url('vetements.jpg'); /* Ajoutez le chemin vers votre image de fond */
+            background-size: cover; /* Pour s'assurer que l'image de fond couvre toute la page */
+            background-position: center; /* Pour centrer l'image de fond */
+            background-repeat: no-repeat; /* Pour éviter la répétition de l'image de fond */
+        }
+        .content {
+            width: 33.33%; /* Prend un tiers de la largeur de la fenêtre */
+            margin: 50px auto; /* Centre horizontalement avec un espace de 50px en haut et en bas */
+            padding: 20px; /* Espacement des éléments de texte par rapport aux bords de la fenêtre */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour la mise en relief */
+            background-color: white; /* Fond blanc */
+            text-align: justify; /* Alignement du texte */
         }
         .menu {
             background-color: purple;
@@ -36,6 +48,13 @@
             text-align: center;
             margin-top: 50px;
         }
+        .search-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px; /* Coins arrondis */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -51,8 +70,9 @@
             </nav>
         </div>
     </div>
+    <div class="content">
     <div id="searchContainer">
-        <h1>Recherche d'adresses</h1>
+    <div class="search-box">
         <input type="text" id="addressInput" placeholder="Entrez une adresse à Lyon">
         <button onclick="searchAddresses()">Rechercher</button>
         <p>Ou</p>
@@ -70,8 +90,19 @@
         </select>
         <button type="button" onclick="searchAddresses()">Rechercher</button>
     </form>
+    <br>
+    <br>
+    <p>Dans un contexte climatique plus compliqué que jamais, RecycleMe vous propose une démarche
+        éco-résponsable afin de recycler vos vêtements. Vêtements abimés, troués, ou encore parce que vous 
+        avez été victime de la fast fashion? Si vous souhaitez vous débarasser de vos vêtements, les bornes 
+        à vêtements sont faites pour vous. Si vous vous demandez où vos anciennes possessions vont aller, 
+        ne cherchez pas plus loin : 5% des vêtements collectés seront revendu dans les friperies locales du Relais, 
+        55 % seront exportés, (à 50 centimes le kilo), notamment en Afrique. Le reste sera recyclé : 25 % en matières 
+        premières et 10 % en chiffons. Enfin, 5 % sera brûlé pour produire de l'énergie.
+    </p>
     </div>
-
+    </div>
+</div>
     <script>
         function searchAddresses() {
             var address = document.getElementById('addressInput').value;
