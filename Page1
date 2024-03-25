@@ -39,24 +39,40 @@
         <div class="col-2 menu">
             <nav>
                 <ul>
-                    <li><a href="PPP1.html" style="color: #FFC300";>Recherche d'adresses</a></li>
-                    <li><a href="PPP2.html" style="color: #F5F5DC";>Carte des bornes de recyclage</a></li>
-                    <li><a href="PPP3.html" style="color: #F5F5DC";>Informations sur les bornes de recyclage</a></li>
+                    <li><a href="PPP1.html" style="color: #FFC300";>Position</a></li>
+                    <li><a href="PPP2.html" style="color: #F5F5DC";>Carte</a></li>
+                    <li><a href="PPP3.html" style="color: #F5F5DC";>Informations</a></li>
                 </ul>
             </nav>
         </div>
     </div>
     <div id="searchContainer">
         <h1>Recherche d'adresses</h1>
-        <input type="text" id="addressInput" placeholder="Entrez une adresse à Lyon...">
+        <input type="text" id="addressInput" placeholder="Entrez une adresse à Lyon">
         <button onclick="searchAddresses()">Rechercher</button>
+        <p>Ou</p>
+        <select id="arrondissement">
+            <option value="">Sélectionnez un arrondissement</option>
+            <option value="1">1er arrondissement</option>
+            <option value="2">2ème arrondissement</option>
+            <option value="3">3ème arrondissement</option>
+            <option value="3">4ème arrondissement</option>
+            <option value="3">5ème arrondissement</option>
+            <option value="3">6ème arrondissement</option>
+            <option value="3">7ème arrondissement</option>
+            <option value="3">8ème arrondissement</option>
+            <option value="3">9ème arrondissement</option>
+        </select>
+        <button type="button" onclick="searchAddresses()">Rechercher</button>
+    </form>
     </div>
 
     <script>
         function searchAddresses() {
             var address = document.getElementById('addressInput').value;
+            var arrondissement = document.getElementById('arrondissement').value;
             // Redirection vers la deuxième page avec l'adresse en tant que paramètre de requête
-            window.location.href = 'PPP2.html?address=' + encodeURIComponent(address);
+            window.location.href = 'PPP2.html?address=' + encodeURIComponent(address)+ '&arrondissement=' + encodeURIComponent(arrondissement);
         }
     </script>
 </body>
